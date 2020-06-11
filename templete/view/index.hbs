@@ -1,0 +1,22 @@
+<html>
+    
+    <body>
+        {{>header}}
+        <h1>
+            Index Page
+        </h1>
+        <form>
+            <input>
+            <button>Search</button>
+        </form>
+         {{>footer}}
+    </body>
+    <script>
+        function GetList(e) {
+            e.preventDefault();
+            console.log('Run')
+        }
+        const peopleform = document.querySelector('form');
+        peopleform.addEventListener('submit',GetList);
+    </script>   
+</html>

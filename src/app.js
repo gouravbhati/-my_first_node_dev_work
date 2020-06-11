@@ -4,6 +4,7 @@ const request = require('request');
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
 const templeterootpath = path.join(__dirname, '../templete/view');
 const partialspah = path.join(__dirname, '../templete/partials');
 const app = express();
@@ -50,5 +51,5 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => console.log('serve start on http://localhost:3000'));
+app.listen(port, () => console.log('serve start on '+port));
 
